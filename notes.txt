@@ -1,3 +1,19 @@
+To Do Notes from Stew:
+----------------------
+
+- set up to use Gemfile and bundler (took me way to long to realise the error was from using rspec 2 not 1)
+- write basic recipe to hit and check projects on a hudson server
+  + add acceptance test for fixture xml file?
+  + add server/project classes
+  + add xml feed to project interpretation (use nokogiri? xpath vs css selectors flame war with perryn?)
+  + add server to http request interaction (just httparty get it?)
+- write up some notes about libusb install on various platforms
+  + macports screwed up, homebrew seemed to work fine
+  + think this was because macports version did not put all the headers/libs in the right place
+
+Perryn's Existing Notes:
+------------------------
+
 - To use ruby-usb you need the libusb-compat-0.1
      - ??? make a new binding for libusb-1.0? - ribusb??
      
@@ -12,7 +28,6 @@
 
 - Errno::EPIPE: Broken pipe - usb_control_msg
     why does this happen? endpoint initialization?
-    
     
 ------------- ubuntu
 
