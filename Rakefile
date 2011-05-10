@@ -1,5 +1,8 @@
 require 'rubygems'
-require 'rake'
+require 'bundler'
+
+Bundler.require
+$:.unshift(File.dirname(__FILE__))
 
 desc "Check if blinky is working with your USB device"
 task :check_device do
@@ -39,4 +42,12 @@ Rake::RDocTask.new do |rdoc|
   rdoc.title = "blinky #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
+end
+
+desc "Run blinky with a dummy recipe to test the light works"
+task :tryme do
+  require 'lib/blinky'
+
+  blinky = Blinky.new
+  blinky.watch_test_server
 end
