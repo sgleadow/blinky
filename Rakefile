@@ -47,9 +47,9 @@ Rake::RDocTask.new do |rdoc|
 end
 
 desc "Run blinky with a dummy recipe to test the light works"
-task :tryme do
+task :try do
   require 'lib/blinky'
 
-  blinky = Blinky.new
-  blinky.watch_test_server
+  blinky = Blinky.new()
+  blinky.watch_jenkins_server
 end
